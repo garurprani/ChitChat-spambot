@@ -61,23 +61,6 @@ pip install -r requirements.txt
                 <li>Replace the <code>auth_token</code> value in the <code>main</code> function:</li>
             </ol>
             <pre><code>auth_token = "your_actual_token_here"</code></pre>
- <!-- Insert images here from the 'ss' folder -->
-            <h3>Obtaining Auth Token</h3>
-            <img src="ss/3.png" alt="Step 1: Obtain auth token" width="50%">
-            <br><br>
-            <img src="ss/4.png" alt="Step 2: Obtain auth token" width="50%">
-            <br><br>
-            <img src="ss/5.png" alt="Step 2: Obtain auth token" width="50%">
-            <br><br>
-            <img src="ss/6.png" alt="Step 2: Obtain auth token" width="50%">
-            <br><br>
-            <img src="ss/7.png" alt="Step 2: Obtain auth token" width="50%">
-            <br><br>
-            <img src="ss/8.png" alt="Step 2: Obtain auth token" width="50%">
-            <br><br>
-            <img src="ss/9.png" alt="Step 2: Obtain auth token" width="50%">
-            <!-- Add more images if needed -->
-            </div>
          
 
    <div class="step">
