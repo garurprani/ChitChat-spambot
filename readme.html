@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Selenium Automation Tutorial</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #222;
+    color: #ddd;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+        h1, h2, h3 {
+            color: #fff;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #fff;
+        }
+        h3 {
+            font-size: 1.2em;
+            color: #fff;
+        }
+        pre {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .step-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #00b3b3;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 1em;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="header" style="background-color: #333; padding: 20px; text-align: center;">
+            <h1 style="margin-bottom: 10px; color: #fff; font-size: 2.5em;">Python Selenium Automation Tutorial</h1>
+            <p style="color: #ccc; font-size: 1.2em; margin-bottom: 0;">
+                Scripted by 
+                <a href="https://www.fiverr.com/garurprani" style="color: #00b3b3; text-decoration: none;" target="_blank">@garurprani (Fiverr)</a> |
+                <a href="https://github.com/garurprani" style="color: #00b3b3; text-decoration: none;" target="_blank">GitHub</a>
+            </p>
+        </div>
+        <p>This tutorial will guide you through the process of setting up and running a Python script using Selenium to automate browser actions.</p>
+
+        <div class="step">
+            <h2 class="step-title">Step 1: Install Required Packages</h2>
+            <p>Ensure you have the required Python packages installed. You can install them using pip:</p>
+            <pre><code>pip install requests psutil selenium</code></pre>
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">Step 2: Replace <code>user_data_dir</code> and <code>auth_token</code></h2>
+            <h3>Replace <code>user_data_dir</code></h3>
+            <ol>
+                <li>Open your Chrome browser and type <code>chrome://version/</code> in the address bar.</li>
+                <li>Find the <strong>Profile Path</strong>. It should look something like <code>C:\Users\<YourUsername>\AppData\Local\Google\Chrome\User Data</code>.</li>
+                <li>Copy this path and replace the value of <code>user_data_dir</code> in the code:</li>
+            </ol>
+            <pre><code>user_data_dir = "C:/Users/&lt;YourUsername&gt;/AppData/Local/Google/Chrome/User Data"</code></pre>
+            
+            <h3>Replace <code>profile_directory</code></h3>
+            <ol>
+                <li>Identify the profile you want to use (e.g., <code>Profile 1</code>, <code>Profile 2</code>, etc.).</li>
+                <li>Replace the value of <code>profile_directory</code> in the code:</li>
+            </ol>
+            <pre><code>profile_directory = "Profile 5"  <!-- Replace with your profile number --></code></pre>
+
+            <h3>Replace <code>auth_token</code></h3>
+            <ol>
+                <li>Obtain your authentication token from the relevant source.</li>
+                <li>Replace the <code>auth_token</code> value in the <code>main</code> function:</li>
+            </ol>
+            <pre><code>auth_token = "your_actual_token_here"</code></pre>
+
+            <!-- Insert images here from the 'ss' folder -->
+            <h3>Obtaining Auth Token</h3>
+            <img src="ss/3.png" alt="Step 1: Obtain auth token" width="50%">
+            <br><br>
+            <img src="ss/4.png" alt="Step 2: Obtain auth token" width="50%">
+            <br><br>
+            <img src="ss/5.png" alt="Step 2: Obtain auth token" width="50%">
+            <br><br>
+            <img src="ss/6.png" alt="Step 2: Obtain auth token" width="50%">
+            <br><br>
+            <img src="ss/7.png" alt="Step 2: Obtain auth token" width="50%">
+            <br><br>
+            <img src="ss/8.png" alt="Step 2: Obtain auth token" width="50%">
+            <br><br>
+            <img src="ss/9.png" alt="Step 2: Obtain auth token" width="50%">
+            <!-- Add more images if needed -->
+            </div>
+         
+
+        <div class="step">
+            <h2 class="step-title">Step 3: Download and Setup ChromeDriver</h2>
+            <h3>Find Chrome Version</h3>
+            <ol>
+                <li>Open Chrome and type <code>chrome://settings/help</code> in the address bar to find your Chrome version.</li>
+            </ol>
+            
+            <h3>Download ChromeDriver</h3>
+            <ol>
+                <li>Go to the <a href="https://sites.google.com/chromium.org/driver/downloads">ChromeDriver download page</a> and download the version that matches your Chrome browser version.</li>
+            </ol>
+
+            <h3>Extract and Place ChromeDriver</h3>
+            <ol>
+                <li>Extract the downloaded file.</li>
+                <li>Place the <code>chromedriver.exe</code> file in the same directory as your script, or provide the correct path in the code:</li>
+            </ol>
+            <pre><code>webdriver_path = os.path.join(script_dir, 'chromedriver.exe')  <!-- Adjust the path if necessary --></code></pre>
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">Step 4: Run the Script</h2>
+            <p>Ensure the script is in the same directory as <code>chromedriver.exe</code> or the path to <code>chromedriver.exe</code> is correctly set. Then run the script using Python:</p>
+            <pre><code>python your_script_name.py</code></pre>
+        </div>
+
+        <div class="step">
+            <h2 class="step-title">Full Code After Adjustments</h2>
+        </div>
+    </div>
+</body>
+</html>
